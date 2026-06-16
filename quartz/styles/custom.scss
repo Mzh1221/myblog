@@ -1,18 +1,29 @@
 @use "./variables.scss" as *;
 
-// 最近笔记 间距全局调整
-.recent-notes {
-  padding: 0.5rem;    // 框内留白缩小
-  margin-top: 0.8rem;  // 和上方文字距离
-}
+@use "./base.scss";
 
-.recent-notes ul {
+// 下面放你所有紧凑最近笔记的样式代码
+/* ===== 紧凑版最近笔记 Quartz5 ===== */
+.recent-listing {
+  margin-top: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+.recent-listing h3 {
+  margin-bottom: 0.3rem !important;
+}
+.recent-listing ul {
+  list-style: none;
+  padding-left: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;         // 笔记条目之间空隙
-  padding-left: 0;
+  gap: 0.15rem;
 }
-
-.recent-notes li time {
-  margin-top: 0.1rem;  // 标题和日期的距离
+.recent-listing li {
+  padding: 0.1rem 0;
+}
+.recent-listing li time {
+  display: block;
+  margin-top: 0.05rem;
+  font-size: 0.82rem;
+  color: var(--gray);
 }
