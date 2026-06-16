@@ -1,0 +1,219 @@
+{
+  "id": "fe09ed90-8469-44e1-a03e-dadc7d23d153",
+  "title": "YOLO插件测试",
+  "messages": [
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "测试YOLO插件",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": null,
+      "id": "90bb0d02-7766-470a-a883-cf611595c7ba",
+      "mentionables": [],
+      "selectedSkills": [],
+      "selectedModelIds": [],
+      "reasoningLevel": "auto",
+      "timeContext": "2026-06-16 23:42 (Tuesday)"
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "reasoning": "The user has a diary file open and wants to test the YOLO plugin. Let me first read the file to see its content.",
+      "toolCallRequests": [
+        {
+          "id": "call_00_N0FUmjRNGX0tsygGYZMt5592",
+          "name": "yolo_local__fs_read",
+          "arguments": {
+            "kind": "complete",
+            "value": {
+              "paths": [
+                "日记/2026-06-16.md"
+              ]
+            },
+            "rawText": "{\"paths\": [\"日记/2026-06-16.md\"]}"
+          }
+        }
+      ],
+      "id": "03491981-4611-4376-afbf-da9ebd7fe7e7",
+      "metadata": {
+        "model": {
+          "providerId": "DeepSeek",
+          "id": "DeepSeek/deepseek-v4-flash",
+          "model": "deepseek-v4-flash",
+          "name": "deepseek-v4-flash",
+          "maxContextTokens": 1048576,
+          "modalities": [
+            "text"
+          ],
+          "builtinToolProvider": "none",
+          "builtinTools": {
+            "gpt": {
+              "webSearch": {
+                "enabled": false
+              }
+            },
+            "openrouter": {
+              "webSearch": {
+                "enabled": false
+              }
+            },
+            "grok": {
+              "webSearch": {
+                "enabled": false
+              }
+            },
+            "gemini": {
+              "webSearch": {
+                "enabled": false
+              },
+              "urlContext": {
+                "enabled": false
+              }
+            }
+          },
+          "reasoningType": "openai"
+        },
+        "generationState": "completed",
+        "branchConversationId": "fe09ed90-8469-44e1-a03e-dadc7d23d153",
+        "branchModelId": "DeepSeek/deepseek-v4-flash",
+        "branchLabel": "deepseek-v4-flash",
+        "usage": {
+          "prompt_tokens": 3809,
+          "completion_tokens": 86,
+          "total_tokens": 3895
+        },
+        "durationMs": 1854
+      }
+    },
+    {
+      "role": "tool",
+      "toolCalls": [
+        {
+          "request": {
+            "id": "call_00_N0FUmjRNGX0tsygGYZMt5592",
+            "name": "yolo_local__fs_read",
+            "arguments": {
+              "kind": "complete",
+              "value": {
+                "paths": [
+                  "日记/2026-06-16.md"
+                ]
+              },
+              "rawText": "{\"paths\": [\"日记/2026-06-16.md\"]}"
+            }
+          },
+          "response": {
+            "status": "success",
+            "data": {
+              "type": "text",
+              "text": "{\n  \"toolCallId\": \"call_00_N0FUmjRNGX0tsygGYZMt5592\",\n  \"requestedOperation\": {\n    \"type\": \"full\"\n  },\n  \"results\": [\n    {\n      \"path\": \"日记/2026-06-16.md\",\n      \"ok\": true,\n      \"totalLines\": 15,\n      \"hasMoreBelow\": false,\n      \"nextStartLine\": null,\n      \"content\": \"1|成功在 github 部署了我的 quarz+obsidian 网页\\n2|\\n3|突然想起来 seelen ui win+tab 可以直接拖拽\\n4|\\n5|又看到一位小姐姐 [Aster Hu’s Blog | Asteroid - Thoughts](https://www.asterhu.com/thoughts/) 的博客，[French](https://notes.asterhu.com/notes/french) 学法语还有中文注释\\n6|\\n7|看到她取 Aster Hu，我也想取个有个性的英文名，叫豆包帮我想，但是选来选去还是直接 Zihao Mo 吧，看别的名字难受\\n8|\\n9|我看她上面那个链接的博客已经停更一年了，不过也可能是有更新日记等但 ignore 不公开的，但是 [Purring Yarn's blog | Purring Yarn](https://purringyarn.pages.dev/blog/) 她这个一直在更新，截至 2026-06-16 19:53:00 她最近更新在 2026-5-10，那很爱 knitting 了，感觉是很爱生活的一个人\\n10|\\n11|[这个创意真的惊艳，我都怀疑荒木是为了这口醋才把徐伦设计成丝线能力的！](https://www.bilibili.com/video/BV1T7J36FERe/) 好感人啊，石之海，没有看原片只是偶然刷到这个解说，这个结局竟如此催泪\\n12|\\n13|啊呀张哲源天天乱看我在干嘛还读出来，他妈的有没有点距离感\\n14|\\n15|今天玩了一天 quartz5 真好玩\"\n    }\n  ]\n}"
+            }
+          }
+        }
+      ],
+      "id": "8b08f20e-5020-4511-9c92-c663a250c89b",
+      "metadata": {
+        "branchConversationId": "fe09ed90-8469-44e1-a03e-dadc7d23d153",
+        "branchModelId": "DeepSeek/deepseek-v4-flash",
+        "branchLabel": "deepseek-v4-flash"
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "你好！YOLO 插件正在工作中 ✅\n\n以下是刚刚自动完成的操作演示：\n\n---\n\n### 📄 读取文件\n成功读取了 `日记/2026-06-16.md`（15 行），你今天的日记内容已经加载。\n\n### 🔍 快速信息提取\n今天的日记提到了一些有趣的东西：\n\n| 主题 | 内容 |\n|------|------|\n| 🏗️ 技术 | Quartz 5 + Obsidian 部署到 GitHub |\n| 📚 博客 | Aster Hu、Purring Yarn 的博客 |\n| 🎬 视频 | B 站石之海解说 |\n| 😤 吐槽 | 张哲源没边界感 |\n\n### 🧠 记忆能力\n我可以记住你的偏好，比如：\n```json\n// 示例：如果后续你想让我记住某些东西\nyolo_local__memory_add({content: \"...\"})\n```\n\n### ✏️ 编辑文件（需切换到 Agent 模式）\nYOLO 支持通过 `<yolo_block>` 标记编辑文件，例如：\n\n<yolo_block filename=\"日记/2026-06-16.md\">\n<<<<<<< APPEND\n\n测试 YOLO 插件成功 🎉\n=======\n</yolo_block>\n\n（不过当前是 **Ask 模式**，编辑写入需切换到 **Agent 模式**）\n\n### 🔧 其他能力一览\n- **Obsidian CLI** — 操作 Obsidian 命令面板、每日笔记、反向链接等\n- **Skill 创建** — 编写和安装 YOLO skills\n- **Snippet 创建** — 管理 `/` 快捷指令\n- **Web 搜索/抓取** — 拉取网页内容\n- **文件搜索** — 全文检索整个 Vault\n\n---\n\n有什么想进一步测试的？比如搜索 Vault 里的某个内容、获取某篇博客的最新文章、或者创建一个 skill？😄",
+      "reasoning": "The user says \"测试YOLO插件\" which means \"Testing YOLO plugin\". They are currently looking at their diary file for 2026-06-16. Let me provide a helpful response showing what the YOLO plugin can do for them.\n\nSince they're in Ask mode, I can demonstrate some capabilities by searching or reading files to show what the YOLO plugin can do. Let me think about what YOLO plugin features I can demonstrate:\n\n1. Obsidian CLI integration\n2. File operations (read, search)\n3. Memory management\n4. Web scraping\n5. Skill usage\n6. Output formatting with `<yolo_block>`\n\nLet me give a brief overview of the YOLO plugin's capabilities and demonstrate a quick test.\n\nActually, the user is just testing - let me demonstrate a couple of things quickly to show the plugin is working.",
+      "id": "7182c810-a91b-4d20-a041-6e229013198d",
+      "metadata": {
+        "model": {
+          "providerId": "DeepSeek",
+          "id": "DeepSeek/deepseek-v4-flash",
+          "model": "deepseek-v4-flash",
+          "name": "deepseek-v4-flash",
+          "maxContextTokens": 1048576,
+          "modalities": [
+            "text"
+          ],
+          "builtinToolProvider": "none",
+          "builtinTools": {
+            "gpt": {
+              "webSearch": {
+                "enabled": false
+              }
+            },
+            "openrouter": {
+              "webSearch": {
+                "enabled": false
+              }
+            },
+            "grok": {
+              "webSearch": {
+                "enabled": false
+              }
+            },
+            "gemini": {
+              "webSearch": {
+                "enabled": false
+              },
+              "urlContext": {
+                "enabled": false
+              }
+            }
+          },
+          "reasoningType": "openai"
+        },
+        "generationState": "completed",
+        "branchConversationId": "fe09ed90-8469-44e1-a03e-dadc7d23d153",
+        "branchModelId": "DeepSeek/deepseek-v4-flash",
+        "branchLabel": "deepseek-v4-flash",
+        "usage": {
+          "prompt_tokens": 4363,
+          "completion_tokens": 583,
+          "total_tokens": 4946,
+          "cache_read_input_tokens": 3712
+        },
+        "durationMs": 7495
+      }
+    }
+  ],
+  "createdAt": 1781624568583,
+  "updatedAt": 1781624578009,
+  "schemaVersion": 1,
+  "overrides": {
+    "chatMode": "ask"
+  },
+  "conversationModelId": "DeepSeek/deepseek-v4-flash",
+  "messageModelMap": {
+    "90bb0d02-7766-470a-a883-cf611595c7ba": "DeepSeek/deepseek-v4-flash"
+  },
+  "assistantGroupBoundaryMessageIds": [],
+  "reasoningLevel": "auto",
+  "compaction": []
+}
