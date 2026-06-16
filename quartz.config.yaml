@@ -16,7 +16,7 @@ configuration:
     - 周记
     - 时间表
   theme:
-    fontOrigin: googleFonts
+    fontOrigin: localFonts
     cdnCaching: true
     typography:
       header: Maple Mono NF CN
