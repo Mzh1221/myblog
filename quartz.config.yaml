@@ -19,9 +19,9 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Inter
-      body: Noto Serif SC
-      code: JetBrains Mono
+      header: Roboto Slab
+      body: Roboto
+      code: Fira Code
     colors:
       lightMode:
         light: "#faf8f8"
