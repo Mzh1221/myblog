@@ -1,1 +1,29 @@
 @use "./variables.scss" as *;
+@use "./base.scss";
+
+/* ========== 右侧侧边栏（目录+关系图谱）修复挤压 ========== */
+.grid-sidebar-right {
+  /* 降低侧边栏最小宽度，默认一般240px，改成180px更窄 */
+  min-width: 180px !important;
+  max-width: 220px !important;
+  padding: 0.6rem 0.4rem;
+}
+
+/* 目录文字强制自动换行，不会横向挤压 */
+.table-of-contents li a {
+  white-space: normal !important;
+  word-break: break-all;
+  line-height: 1.4;
+}
+
+/* 反向链接区块压缩间距 */
+.backlinks {
+  margin-top: 1rem;
+  gap: 0.2rem;
+}
+
+/* 关系图谱容器高度自适应，不挤占目录空间 */
+.graph-container {
+  min-height: 180px;
+  margin-bottom: 0.8rem;
+}
