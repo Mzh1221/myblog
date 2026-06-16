@@ -15,6 +15,7 @@ configuration:
     - 日记
     - 周记
     - 时间表
+    - 思考
   theme:
     fontOrigin: googleFonts
     cdnCaching: true
