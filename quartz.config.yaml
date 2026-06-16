@@ -17,10 +17,10 @@ configuration:
     - 时间表
   theme:
     fontOrigin: googleFonts
-    cdnCaching: true
+    cdnCaching: false
     typography:
       header: Schibsted Grotesk
-      body: Noto Sans SC
+      body: Source Sans Pro
       code: IBM Plex Mono
     colors:
       lightMode:
