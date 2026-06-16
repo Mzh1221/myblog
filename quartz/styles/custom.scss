@@ -27,3 +27,24 @@
   min-height: 180px;
   margin-bottom: 0.8rem;
 }
+
+/* 清除所有链接选中高亮底色（侧边栏+正文+右侧目录通用） */
+a::selection,
+.table-of-contents a::selection,
+.sidebar-left .folder-list a::selection,
+.recent-listing li a::selection {
+  background: transparent !important;
+  color: inherit !important;
+}
+
+/* 鼠标hover侧边栏链接时弱化背景，避免大块色块 */
+.sidebar-left .folder-list a:hover {
+  background-color: rgba(130, 92, 245, 0.08) !important;
+}
+
+/* 左侧侧边栏条目长链接自动换行，不会一整条长色块 */
+.sidebar-left .folder-list a {
+  white-space: normal !important;
+  word-break: break-all;
+  line-height: 1.35;
+}
