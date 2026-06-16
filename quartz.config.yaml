@@ -16,12 +16,12 @@ configuration:
     - 周记
     - 时间表
   theme:
-    fontOrigin: localFonts
+    fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Maple Mono NF CN
-      body: Maple Mono NF CN
-      code: Maple Mono NF CN
+      header: Inter
+      body: Noto Serif SC
+      code: JetBrains Mono
     colors:
       lightMode:
         light: "#faf8f8"
