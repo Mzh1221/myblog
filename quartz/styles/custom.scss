@@ -1,6 +1,7 @@
 @use "./variables.scss" as *;
 
 .recent-notes > ul.recent-ul > li {
+  margin: 0.25rem 0;
   .section > .desc > h3 > a {
     font-size: 0.85rem;
   }
