@@ -274,7 +274,7 @@ plugins:
       subdir: plugin
     enabled: true
     options:
-      theme: default
+      theme: everforest
   - source: github:quartz-community/obsidian-plugin-excalidraw
     enabled: true
     options:
