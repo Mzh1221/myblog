@@ -6,7 +6,7 @@ configuration:
   enablePopovers: true
   analytics:
     provider: plausible
-  locale: zh-CN
+  locale: en-US
   baseUrl: mzh1221.github.io/myblog
   ignorePatterns:
     - private
@@ -274,7 +274,7 @@ plugins:
       subdir: plugin
     enabled: true
     options:
-      theme: everforest
+      theme: default
   - source: github:quartz-community/obsidian-plugin-excalidraw
     enabled: true
     options:
