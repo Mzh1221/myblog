@@ -19,9 +19,9 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Schibsted Grotesk
-      body: Source Sans Pro
-      code: IBM Plex Mono
+      header: Maple Mono NF CN
+      body: Maple Mono NF CN
+      code: Maple Mono NF CN
     colors:
       lightMode:
         light: "#faf8f8"
