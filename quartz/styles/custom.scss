@@ -1,29 +1,37 @@
 @use "./variables.scss" as *;
-
 @use "./base.scss";
 
-// 下面放你所有紧凑最近笔记的样式代码
-/* ===== 紧凑版最近笔记 Quartz5 ===== */
+/* 最近笔记 紧凑优化 - 修复红底色、缩小全部间距 */
 .recent-listing {
   margin-top: 0.6rem;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.3rem;
 }
+
+/* 「最近的笔记」标题和列表距离压缩 */
 .recent-listing h3 {
-  margin-bottom: 0.3rem !important;
+  margin-bottom: 0.2rem !important;
 }
+
+/* 列表清除默认边距，条目极小间隔 */
 .recent-listing ul {
   list-style: none;
   padding-left: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.15rem;
+  gap: 0.1rem; /* 条目之间空隙，0.1最紧凑 */
 }
+
+/* 关键：移除li的padding，消除选中红块 */
 .recent-listing li {
-  padding: 0.1rem 0;
+  padding: 0;
+  margin: 0;
 }
+
+/* 日期紧贴标题，缩小字号 */
 .recent-listing li time {
   display: block;
-  margin-top: 0.05rem;
-  font-size: 0.82rem;
+  margin-top: 0.02rem;
+  font-size: 0.8rem;
   color: var(--gray);
 }
