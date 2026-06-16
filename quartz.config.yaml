@@ -6,12 +6,15 @@ configuration:
   enablePopovers: true
   analytics:
     provider: plausible
-  locale: en-US
+  locale: zh-CN
   baseUrl: mzh1221.github.io/myblog
   ignorePatterns:
     - private
     - templates
     - .obsidian
+    - 日记
+    - 周记
+    - 时间表
   theme:
     fontOrigin: googleFonts
     cdnCaching: true
