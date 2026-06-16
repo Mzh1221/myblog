@@ -233,7 +233,7 @@ plugins:
   - source: github:quartz-community/recent-notes
     enabled: true
     options:
-      limit: 5
+      limit: 3
       showTags: true
     layout:
       position: afterBody
