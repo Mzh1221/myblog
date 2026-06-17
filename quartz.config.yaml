@@ -232,7 +232,7 @@ plugins:
       links:
         Exported with love 💙 from Obsidian : https://obsidian.md
         GitHub: https://github.com/Mzh1221
-        首页: https://mzh1221.github.io/myblog/
+        Home: https://mzh1221.github.io/myblog/
   - source: github:quartz-community/recent-notes
     enabled: true
     options:
