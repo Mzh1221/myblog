@@ -228,6 +228,7 @@ plugins:
   - source: github:quartz-community/footer
     enabled: true
     options:
+      afterText: "Exported with love 💙 from Obsidian"
       links:
         Exported with love 💙 from :
         Obsidian: https://obsidian.md
