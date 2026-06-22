@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "entries": {
+    "f58924bc": {
+      "hash": "f58924bc",
+      "content": [
+        {
+          "type": "text",
+          "text": "## Mentioned Vault Files (outline only)\n- `电子/电路原理/电路定理.md`\n  - L1 # 叠加定理\n  - L9 # 齐次定理\n  - L17 # 替代定理\n  - L28 # 戴维南定理和诺顿定理\n\nThis section provides only paths and outlines. Use file tools only if you need the full contents or a specific line range.\n\n\n电路定理.md 教我一下戴维南和诺顿定理，写在我下面\n\n"
+        }
+      ],
+      "createdAt": 1782138217378,
+      "updatedAt": 1782138217378
+    }
+  }
+}
