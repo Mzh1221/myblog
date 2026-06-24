@@ -15,7 +15,8 @@ configuration:
     - 日记
     - 周记
     - 时间表
-    - 知乎
+    - zhihu
+    - YOLO
   theme:
     fontOrigin: googleFonts
     cdnCaching: true
