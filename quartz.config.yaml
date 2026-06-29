@@ -235,9 +235,9 @@ plugins:
     enabled: true
     options:
       links:
-        Exported with love 💙 from Obsidian : https://obsidian.md
+        归档: /archive
         GitHub: https://github.com/Mzh1221
-        Home: https://mzh1221.github.io/myblog/
+        首页: /
   - source: github:quartz-community/recent-notes
     enabled: true
     options:
@@ -247,6 +247,15 @@ plugins:
       position: afterBody
       priority: 5
       condition: index
+  - source: github:quartz-community/recent-notes
+    enabled: true
+    options:
+      limit: 999
+      showTags: true
+    layout:
+      position: afterBody
+      priority: 5
+      condition: archive
   - source: github:quartz-community/spacer
     enabled: true
     options: {}
