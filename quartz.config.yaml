@@ -280,9 +280,9 @@ plugins:
       name: quartz-themes
       repo: github:saberzero1/quartz-themes
       subdir: plugin
-    enabled: true
+    enabled: false
     options:
-      theme: border
+      theme: gummy-revived
   - source: github:quartz-community/obsidian-plugin-excalidraw
     enabled: true
     options:
