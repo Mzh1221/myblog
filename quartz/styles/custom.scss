@@ -261,6 +261,30 @@ footer a {
   color: #fff;
 }
 
+/* ========== Table ========== */
+.table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+
+.table-container th,
+.table-container td {
+  padding: 0.6rem 0.8rem;
+  min-width: 100px;
+}
+
+@media (max-width: 800px) {
+  .table-container table {
+    white-space: normal;
+  }
+}
+
 /* ========== Article Title ========== */
 .article-title h1 {
   font-size: 2rem;
