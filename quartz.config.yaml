@@ -1,12 +1,12 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: MZH 的数字花园
+  pageTitle: MZH's Blog 
   pageTitleSuffix: " | MZH"
   enableSPA: true
   enablePopovers: true
   analytics:
     provider: plausible
-  locale: zh-CN
+  locale: en-US
   baseUrl: mzh1221.github.io/myblog
   ignorePatterns:
     - private
@@ -289,9 +289,9 @@ plugins:
       name: quartz-themes
       repo: github:saberzero1/quartz-themes
       subdir: plugin
-    enabled: false
+    enabled: true
     options:
-      theme: gummy-revived
+      theme: wasp
   - source: github:quartz-community/obsidian-plugin-excalidraw
     enabled: true
     options:
