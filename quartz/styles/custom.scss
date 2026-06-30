@@ -7,6 +7,7 @@
 
 article {
   max-width: var(--pageW);
+  padding: 0 2rem;
 }
 
 /* ========== Typography ========== */
@@ -203,8 +204,45 @@ footer a {
 }
 
 .timeline {
-  position: relative;
-  padding-left: 2rem;
+  padding-left: 0.5rem;
+}
+
+.tl-month {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin: 1.5rem 0 0.8rem;
+}
+
+.tl-month:first-of-type {
+  margin-top: 0;
+}
+
+.tl-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding: 0.4rem 0.5rem;
+  border-radius: 6px;
+  transition: background-color 0.15s ease;
+}
+
+.tl-item:hover {
+  background-color: var(--highlight);
+}
+
+.tl-marker {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--secondary);
+  flex-shrink: 0;
+  margin-top: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.tl-item:hover .tl-marker {
+  transform: scale(1.5);
 }
 
 
