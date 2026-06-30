@@ -96,6 +96,51 @@ export function pageResources(
 })();
 `
 
+  const archiveScript = `
+(function() {
+  function renderArchive() {
+    if (document.body.dataset.slug !== "archive") return;
+    (async function() {
+      try {
+        var data = await fetchData;
+        if (!data) return;
+        var container = document.getElementById("archive-timeline");
+        if (!container) return;
+        var entries = [], totalChars = 0, count = 0;
+        for (var key in data) {
+          var page = data[key];
+          if (!page.date || key === "archive") continue;
+          var d = new Date(page.date);
+          var chars = page.content ? page.content.replace(/<[^>]+>/g, "").replace(/\\s+/g, "").length : 0;
+          totalChars += chars;
+          count++;
+          entries.push({ slug: key, title: page.title || key, date: d, year: d.getFullYear(), month: d.getMonth(), tags: page.tags || [], chars: chars });
+        }
+        entries.sort(function(a, b) { return b.date - a.date; });
+        var totalWords = totalChars < 10000 ? totalChars + "\\u5B57" : (totalChars / 10000).toFixed(1) + "\\u4E07\\u5B57";
+        var html = '<div class="archive-stats">\\u5171 ' + count + ' \\u7BC7\\u6587\\u7AE0 \\u00B7 \\u7EA6 ' + totalWords + '</div><div class="timeline">';
+        var currentYM = "", monthNames = ["1\\u6708","2\\u6708","3\\u6708","4\\u6708","5\\u6708","6\\u6708","7\\u6708","8\\u6708","9\\u6708","10\\u6708","11\\u6708","12\\u6708"];
+        for (var i = 0; i < entries.length; i++) {
+          var e = entries[i];
+          var ym = e.year + "-" + (e.month < 9 ? "0" : "") + (e.month + 1);
+          if (ym !== currentYM) { currentYM = ym; html += '<div class="tl-month">' + e.year + " " + monthNames[e.month] + '</div>'; }
+          var day = (e.date.getDate() < 10 ? "0" : "") + e.date.getDate();
+          var mon = (e.date.getMonth() < 9 ? "0" : "") + (e.date.getMonth() + 1);
+          var tagsH = "", wordH = e.chars > 0 ? '<span class="tl-words">' + e.chars + "\\u5B57</span>" : "";
+          for (var j = 0; j < e.tags.length; j++) { tagsH += '<a class="tl-tag" href="/tags/' + e.tags[j] + '">' + e.tags[j] + "</a>"; }
+          html += '<div class="tl-item"><div class="tl-marker"></div><div class="tl-date">' + mon + "-" + day + '</div><div class="tl-body"><a class="tl-title" href="/' + e.slug + '">' + e.title + "</a>" + (tagsH ? '<div class="tl-tags">' + tagsH + "</div>" : "") + wordH + "</div></div>";
+        }
+        html += "</div>";
+        container.innerHTML = html;
+      } catch(e) { if (console) console.error("Archive:", e); }
+    })();
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderArchive);
+  else renderArchive();
+  document.addEventListener("nav", renderArchive);
+})();
+`
+
   const resources: StaticResources = {
     css: [
       {
@@ -121,6 +166,12 @@ export function pageResources(
         contentType: "inline",
         spaPreserve: true,
         script: tableLabelScript,
+      },
+      {
+        loadTime: "beforeDOMReady",
+        contentType: "inline",
+        spaPreserve: true,
+        script: archiveScript,
       },
       ...resolvedJs,
     ],
