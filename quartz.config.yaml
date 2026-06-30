@@ -223,16 +223,23 @@ plugins:
       position: beforeBody
       priority: 5
       condition: not-index
-    - source: github:quartz-community/comments
-      enabled: true
+  - source: github:quartz-community/comments
+    enabled: true
+    options:
+      provider: giscus
       options:
-        provider: giscus
-        options:
-          repo: mzh1221.github.io/myblog
-          repoId: R_kgDOS78cqw
-          category: Announcements
-          categoryId: DIC_kwDOS78cq84DAMB1
-          lang: en
+        repo: Mzh1221/myblog
+        repoId: R_kgDOS78cqw
+        category: Announcements
+        categoryId: DIC_kwDOS78cq84DAMB1
+        mapping: pathname
+        strict: false
+        reactionsEnabled: true
+        inputPosition: top
+        lang: zh-CN
+    layout:
+      position: afterBody
+      priority: 10
   # - source: github:quartz-community/comments
   #   enabled: true
   #   options:
