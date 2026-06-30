@@ -235,7 +235,7 @@ plugins:
     enabled: true
     options:
       links:
-        归档: /archive
+        归档: /myblog/archive
         GitHub: https://github.com/Mzh1221
         首页: /myblog
   - source: github:quartz-community/recent-notes
