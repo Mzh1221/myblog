@@ -207,16 +207,7 @@ footer a {
   padding-left: 2rem;
 }
 
-.timeline::before {
-  content: "";
-  position: absolute;
-  left: 7px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(to bottom, var(--secondary), var(--lightgray));
-  border-radius: 1px;
-}
+
 
 .tl-month {
   font-size: 1.1rem;

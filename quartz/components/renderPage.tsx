@@ -109,7 +109,7 @@ export function pageResources(
         var entries = [], totalChars = 0, count = 0;
         for (var key in data) {
           var page = data[key];
-          if (!page.date || key === "archive") continue;
+          if (!page.date || key === "archive" || key.indexOf("/index") >= 0 || key.indexOf("tags/") === 0) continue;
           var d = new Date(page.date);
           var chars = page.content ? page.content.replace(/<[^>]+>/g, "").replace(/\\s+/g, "").length : 0;
           totalChars += chars;
