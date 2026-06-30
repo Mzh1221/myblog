@@ -74,6 +74,28 @@ export function pageResources(
   const contentIndexPath = joinSegments(baseDir, "static/contentIndex.json")
   const contentIndexScript = `const fetchData = fetch("${contentIndexPath}").then(data => data.json())`
 
+  const tableLabelScript = `
+(function() {
+  function addLabels() {
+    var tables = document.querySelectorAll(".table-container table");
+    for (var t = 0; t < tables.length; t++) {
+      var headers = tables[t].querySelectorAll("thead th");
+      if (!headers.length) continue;
+      var rows = tables[t].querySelectorAll("tbody tr");
+      for (var r = 0; r < rows.length; r++) {
+        var cells = rows[r].querySelectorAll("td");
+        for (var c = 0; c < cells.length; c++) {
+          if (headers[c]) cells[c].setAttribute("data-label", headers[c].textContent.trim());
+        }
+      }
+    }
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", addLabels);
+  else addLabels();
+  document.addEventListener("nav", addLabels);
+})();
+`
+
   const resources: StaticResources = {
     css: [
       {
@@ -93,6 +115,12 @@ export function pageResources(
         contentType: "inline",
         spaPreserve: true,
         script: contentIndexScript,
+      },
+      {
+        loadTime: "beforeDOMReady",
+        contentType: "inline",
+        spaPreserve: true,
+        script: tableLabelScript,
       },
       ...resolvedJs,
     ],

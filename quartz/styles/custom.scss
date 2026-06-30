@@ -270,18 +270,63 @@ footer a {
 .table-container table {
   width: 100%;
   border-collapse: collapse;
-  white-space: nowrap;
+  font-size: 0.9em;
 }
 
 .table-container th,
 .table-container td {
-  padding: 0.6rem 0.8rem;
-  min-width: 100px;
+  padding: 0.5rem 0.7rem;
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid var(--lightgray);
+}
+
+.table-container th {
+  background-color: var(--lightgray);
+  font-weight: 600;
 }
 
 @media (max-width: 800px) {
-  .table-container table {
+  .table-container table,
+  .table-container thead,
+  .table-container tbody,
+  .table-container th,
+  .table-container td,
+  .table-container tr {
+    display: block;
+  }
+
+  .table-container thead {
+    display: none;
+  }
+
+  .table-container tr {
+    border: 1px solid var(--lightgray);
+    border-radius: 6px;
+    margin-bottom: 0.6rem;
+    padding: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+
+  .table-container td {
+    border: none;
+    padding: 0.3rem 0.5rem 0.3rem 40%;
+    text-align: left;
+    position: relative;
     white-space: normal;
+    word-break: break-word;
+  }
+
+  .table-container td::before {
+    content: attr(data-label) "：";
+    position: absolute;
+    left: 0.5rem;
+    width: 35%;
+    white-space: nowrap;
+    font-weight: 600;
+    color: var(--gray);
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
