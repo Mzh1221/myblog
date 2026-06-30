@@ -42,40 +42,20 @@ jobs:
         run: npm ci
       - name: Install Quartz plugins
         run: npx quartz plugin install
-      - name: Patch plugins
-        run: |
-          python3 -c "
-import os, sys
-patches = [
-  # graph: decode Chinese URL paths
-  (['.quartz/plugins/graph/dist/index.js', '.quartz/plugins/graph/dist/components/index.js'],
-   'a.startsWith(\"/\")&&(a=a.slice(1))),a}',
-   'a.startsWith(\"/\")&&(a=a.slice(1))),decodeURIComponent(a)}'),
-  # comments: clear old widget on SPA nav
-  (['.quartz/plugins/comments/dist/components/index.js'],
-   'if(!e)return;let t=document.createElement(\"script\");t.src=\"https://giscus.app/client.js\"',
-   'if(!e)return;e.innerHTML=\"\";let t=document.createElement(\"script\");t.src=\"https://giscus.app/client.js\"'),
-  # content-index: keep date field
-  (['.quartz/plugins/content-index/dist/index.js'],
-   'delete content2.description;\n        delete content2.date;',
-   'if (!content2.description) delete content2.description;'),
-]
-for files, old, new in patches:
-  for f in files:
-    if not os.path.exists(f):
-      print(f'SKIP (not found): {f}')
-      continue
-    with open(f, 'r') as fh:
-      content = fh.read()
-    if old in content:
-      content = content.replace(old, new)
-      with open(f, 'w') as fh:
-        fh.write(content)
-      print(f'PATCHED: {f}')
-    else:
-      print(f'FAIL (pattern not found): {f}')
-      sys.exit(1)
-"
+      - name: Patch graph plugin
+        run: python3 -c "import re; f=lambda p:open(p).read(); w=lambda p,c:open(p,'w').write(c)
+for f in ['.quartz/plugins/graph/dist/index.js','.quartz/plugins/graph/dist/components/index.js']:
+ c=f(f); n=c.replace('a.startsWith(\"/\")&&(a=a.slice(1))),a}','a.startsWith(\"/\")&&(a=a.slice(1))),decodeURIComponent(a)}')
+ assert c!=n, f'no match in {f}'; w(f,n); print(f'patched graph: {f}')"
+      - name: Patch comments plugin
+        run: python3 -c "f='.quartz/plugins/comments/dist/components/index.js'
+c=open(f).read(); n=c.replace('if(!e)return;let t=document.createElement(\"script\");t.src=\"https://giscus.app/client.js\"','if(!e)return;e.innerHTML=\"\";let t=document.createElement(\"script\");t.src=\"https://giscus.app/client.js\"')
+assert c!=n; open(f,'w').write(n); print('patched comments')"
+      - name: Patch content-index plugin
+        run: python3 -c "f='.quartz/plugins/content-index/dist/index.js'
+c=open(f).read(); o='delete content2.description;\n        delete content2.date;'
+n='if (!content2.description) delete content2.description;'
+assert o in c, 'pattern not found'; c=c.replace(o,n); open(f,'w').write(c); print('patched content-index')"
       - name: Build Quartz
         run: npx quartz build
       - name: Upload artifact
