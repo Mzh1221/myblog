@@ -129,7 +129,7 @@ export function pageResources(
           var tagsH = "", wordH = e.chars > 0 ? '<span class="tl-words">' + e.chars + "\\u5B57</span>" : "";
           for (var j = 0; j < e.tags.length; j++) { tagsH += '<a class="tl-tag" href="' + base + 'tags/' + e.tags[j] + '">' + e.tags[j] + "</a>"; }
           var base = (document.body.dataset.basepath || "") + "/";
-          html += '<div class="tl-item"><div class="tl-marker"></div><div class="tl-date">' + mon + "-" + day + '</div><div class="tl-body"><a class="tl-title" href="' + base + e.slug + '">' + e.title + "</a>" + (tagsH ? '<div class="tl-tags">' + tagsH + "</div>" : "") + wordH + "</div></div>";
+          html += '<div class="tl-item"><div class="tl-date">' + mon + "-" + day + '</div><div class="tl-body"><a class="tl-title" href="' + base + e.slug + '">' + e.title + "</a>" + (tagsH ? '<div class="tl-tags">' + tagsH + "</div>" : "") + wordH + "</div></div>";
         }
         html += "</div>";
         container.innerHTML = html;
