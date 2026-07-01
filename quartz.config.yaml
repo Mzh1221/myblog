@@ -12,7 +12,7 @@ configuration:
     - private
     - templates
     - .obsidian
-    - 日记
+    # - 日记
     - 周记
     - 时间表
     - zhihu
@@ -99,7 +99,7 @@ plugins:
   - source: github:quartz-community/latex
     enabled: true
     options:
-      renderEngine: katex
+      renderEngine: MathJax
     order: 80
   - source: github:quartz-community/citations
     enabled: false
