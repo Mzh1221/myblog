@@ -12,7 +12,7 @@ configuration:
     - private
     - templates
     - .obsidian
-    # - 日记
+    - 日记
     - 周记
     - 时间表
     - zhihu
