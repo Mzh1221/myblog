@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "entries": {
+    "06469bdf": {
+      "hash": "06469bdf",
+      "content": [
+        {
+          "type": "text",
+          "text": "## Mentioned Vault Files (outline only)\n- `杂项/农业气象学.md`\n  - L1 # 题目梳理\n  - L2 ## 南北引种\n  - L23 # PPT 复习梳理\n  - L24 ## 大气\n  - L25 ### 大气的组成\n  - L36 ### 成分变化\n  - L42 ### 大气组成的细节\n  - L43 #### 氮气\n  - L45 #### 氧气\n  - L47 #### 臭氧\n  - L65 #### 二氧化碳\n  - L77 #### 水汽\n  - L89 #### 气溶胶粒子\n  - L99 ### 大气的垂直结构\n  - L101 #### 各层温度变化\n  - L103 #### 对流层\n  - L108 #### 平流层\n  - L113 #### 中间层\n  - L118 #### 电离层（热层）\n  - L120 #### 逸散层\n  - L124 ### 大气上界的确定\n  - L125 #### 物理高度\n  - L127 #### 密度高度\n  - L129 ## 辐射\n  - L130 ### 辐射的基本知识\n  - L148 ### 辐射的基本定理\n  - L149 #### 基尔霍夫定理\n  - L154 #### 斯蒂芬玻耳兹曼定律\n  - L161 #### 维恩位移定律\n  - L167 ### 太阳辐射\n  - L168 #### 太阳辐射强度和太阳常数\n  - L172 #### 太阳高度角\n  - L179 #### 昼长\n\nThis section provides only paths and outlines. Use file tools only if you need the full contents or a specific line range.\n\n\n农业气象学.md 这里有没有，有也改\n\n"
+        }
+      ],
+      "createdAt": 1783042182618,
+      "updatedAt": 1783042182618
+    },
+    "af865804": {
+      "hash": "af865804",
+      "content": [
+        {
+          "type": "text",
+          "text": "## Mentioned Vault Files (outline only)\n- `数学/2026-4-26 数学试卷.md`\n- `数学/判断极限内部加减能否等价.md`\n  - L1 # 极限计算中加减法能否使用等价无穷小的判断方法\n  - L3 ## 1. 问题背景\n  - L15 ## 2. 为什么加减法不能随意替换？\n  - L30 ## 3. 加减法中可替换的充分条件\n  - L37 ## 4. 例子说明\n  - L39 ### 例 1（可以替换）\n  - L47 ### 例 2（不能直接替换）\n  - L52 ### 例 3（可以替换，因为不同阶）\n  - L59 ## 5. 实用判断步骤\n  - L66 ## 6. 总结\n  - L73 ## 更精确的通用法则（两步判断）\n  - L75 ### 第一步：判断能否做等价替换\n  - L82 ### 第二步：如果是情况 B（加减法）\n- `数学/小技巧.md`\n  - L1 # 函数相乘和嵌套函数奇偶性判断\n  - L5 # 积分换元记得变上下限\n- `数学/浙农林2025-2026学年第二学期期中试卷归纳.md`\n  - L1 # 逆序数\n  - L9 # 行列式  $\\displaystyle m \\times n$ 是先行还是先列\n  - L15 # 代数余子式\n  - L22 # 矩阵与行列式初等变换区别\n  - L31 # 转置\n  - L39 # 克莱姆法则\n  - L52 ## 齐次线性方程组\n- `数学/英授常用词汇.md`\n  - L1 ## MIT 18.01: Single Variable Calculus\n  - L10 ## MIT 18.02: Multivariable Calculus\n- `数学/线性代数.md`\n  - L7 ### 1. 什么是“线性无关”？\n  - L14 ### 2. 什么是“矩阵的秩”？\n  - L25 ### 4. 结合你的题目来看\n- `数学/附件/Pasted image 20260604110437.png`\n- `数学/附件/Pasted image 20260606102810.png`\n- `数学/附件/Pasted image 20260605225142.png`\n- `数学/高等数学（多变量微积分）.md`\n  - L4 # 偏导数\n  - L5 ## 抽象复合二元函数求高阶混合偏导（链式法则）\n  - L34 ## 隐函数求偏导\n  - L35 ### 一元隐函数\n  - L42 ### 二元隐函数\n  - L51 ## 二元函数的连续性和可微性判断\n  - L52 ### 逻辑链\n  - L54 ### 定义\n  - L58 ### 判断\n  - L63 ## 偏导数存在判定\n  - L64 ### 用定义\n  - L67 ### 直接导\n  - L78 # 绩满满视频\n  - L79 ## 三角恒等变换\n  - L80 ### 两角和差\n  - L84 ### 倍角公式\n  - L88 ### 降幂公式\n  - L92 ## 求导公式\n  - L109 ## 多元函数求极值\n  - L123 ## 积分区域与圆有关的二重积分\n  - L139 ## 积分区域对称的二重积分\n  - L160 ## 第一类曲面积分\n  - L163 ## 微分方程\n  - L164 ### 可分离变量\n  - L169 ### 齐次微分方程\n  - L180 ### 一阶线性微分方程\n  - L191 ### 常系数齐次方程\n  - L220 ## 二重积分的几何意义\n- `数学/高等数学（单变量微积分）.md`\n\n## Mentioned Vault Folders\n- `数学`\n\nThis section provides only paths and outlines. Use file tools only if you need the full contents or a specific line range.\n\n\n 数学 这里还有没有\n\n"
+        }
+      ],
+      "createdAt": 1783042364773,
+      "updatedAt": 1783042364773
+    },
+    "9e462e68": {
+      "hash": "9e462e68",
+      "content": [
+        {
+          "type": "text",
+          "text": "## Mentioned Vault Files (outline only)\n- `化学/无机及分析化学.md`\n  - L1 ## 概念\n  - L8 ## 依数性\n  - L50 ## Gibbs 函数\n  - L56 ## 基元反应\n  - L73 ## 多重平衡规则\n  - L76 ## 化学分析\n  - L126 ## 酸碱平衡与滴定\n  - L178 ## 沉淀溶解平衡\n  - L196 ## 氧化还原\n  - L229 ## 配位\n  - L245 ## 分光光度法\n  - L265 ## 物质结构\n\nThis section provides only paths and outlines. Use file tools only if you need the full contents or a specific line range.\n\n\n无机及分析化学.md 这个\n\n"
+        }
+      ],
+      "createdAt": 1783042490893,
+      "updatedAt": 1783042490893
+    },
+    "c123d5bf": {
+      "hash": "c123d5bf",
+      "content": [
+        {
+          "type": "text",
+          "text": "## Mentioned Vault Files (outline only)\n- `CS/MySQL/大题复习.md`\n  - L16 ## 题目 1：简单查询（WHERE + 排序）\n  - L34 ## 题目 2：多表连接（INNER JOIN）\n  - L55 ## 题目 3：分组统计（GROUP BY + 聚合函数）\n  - L81 ## 题目 4：子查询（IN / EXISTS）\n  - L118 ## 题目 5：综合大题（连接 + 分组 + 子查询）\n\nThis section provides only paths and outlines. Use file tools only if you need the full contents or a specific line range.\n\n\n大题复习.md 把里面代码块大写的SQL改成sql\n\n"
+        }
+      ],
+      "createdAt": 1783043232137,
+      "updatedAt": 1783043232137
+    },
+    "b9eda04f": {
+      "hash": "b9eda04f",
+      "content": [
+        {
+          "type": "text",
+          "text": "## Mentioned Vault Files (outline only)\n- `电子/电路原理/电阻电路方程.md`\n  - L1 ## KCL、KVL 独立方程个数\n  - L6 ## 网孔电流分析法\n  - L21 ## 回路电流分析法\n  - L26 ## 节点电压分析法\n\nThis section provides only paths and outlines. Use file tools only if you need the full contents or a specific line range.\n\n\n电阻电路方程.md 这找到两个\n\n"
+        }
+      ],
+      "createdAt": 1783044709492,
+      "updatedAt": 1783044709492
+    }
+  }
+}

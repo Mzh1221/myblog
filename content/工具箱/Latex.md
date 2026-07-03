@@ -9,7 +9,7 @@ https://mp.weixin.qq.com/s/Spdk7M2ttHZ0kajPocc_fg
 dint 是 定积分
 int 是不定积分
 align 是换行引导在 align 区域使用\\可以换行 align 触发
-$\varphi 是pp转的$
+$\varphi \text{是}pp\text{转的}$
 \sqrt [几次] (对谁开根) 用 sq 触发
 dot 是在字母上面加点, 先输字母再输 dot 会自动把字母关进去
 \angle 是角
